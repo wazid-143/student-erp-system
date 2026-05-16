@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Teacher Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <div class="sidebar">
+
+            <h2>Teacher Panel</h2>
+
+            <a href="/view_students">
+
+                <button>View Students</button>
+
+            </a>
+
+            <a href="/search_student">
+
+                <button>Search Student</button>
+
+            </a>
+
+            <a href="/add_attendance">
+
+                <button>Add Attendance</button>
+
+            </a>
+
+            <a href="/view_attendance">
+
+                <button>View Attendance</button>
+
+            </a>
+
+            <a href="/add_marks">
+
+                <button>Add Marks</button>
+
+            </a>
+
+            <a href="/view_marks">
+
+                <button>View Marks</button>
+
+            </a>
+
+            <a href="/logout">
+
+                <button>Logout</button>
+
+            </a>
+
+        </div>
+
+        <div class="content">
+
+            <h1>Welcome Teacher 😎</h1>
+
+            <p>
+
+                Teacher Dashboard
+
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

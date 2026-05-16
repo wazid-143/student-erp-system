@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Add Notification</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Add Notification</h1>
+
+        <form method="POST">
+
+            <input type="text"
+                   name="message"
+                   placeholder="Enter Notification">
+
+            <button type="submit">
+
+                Add Notification
+
+            </button>
+
+        </form>
+
+        <a href="/admin_dashboard">
+
+            <button type="button">
+
+                Back
+
+            </button>
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

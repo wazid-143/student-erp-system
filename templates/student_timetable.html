@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Timetable</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="table-wrapper">
+
+        <div class="container table-container">
+
+            <h1>My Timetable</h1>
+
+            <table class="student-table">
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Day</th>
+                    <th>Subject</th>
+                    <th>Time</th>
+
+                </tr>
+
+                {% for row in timetable %}
+
+                <tr>
+
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+            <br>
+
+            <a href="/student_dashboard">
+
+                <button>Back</button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Login</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        {% with messages = get_flashed_messages() %}
+
+            {% if messages %}
+
+                {% for message in messages %}
+
+                    <div class="flash-message">
+
+                        {{ message }}
+
+                    </div>
+
+                {% endfor %}
+
+            {% endif %}
+
+        {% endwith %}
+
+        <h1>Student Management</h1>
+
+        <h2>Login</h2>
+
+        <form method="POST">
+
+            <input type="email"
+                   name="email"
+                   placeholder="Email">
+
+            <input type="password"
+                   name="password"
+                   placeholder="Password">
+
+            <button type="submit">
+
+                Login
+
+            </button>
+
+        </form>
+        
+        <a href="/register">
+
+            <button type="button">
+
+                Create Account
+
+            </button>
+         
+        </a>
+        <a href="/forgot_password">
+
+            <button type="button">
+
+                Forgot Password
+
+            </button>
+
+        </a>
+    </div>
+
+</body>
+
+</html>

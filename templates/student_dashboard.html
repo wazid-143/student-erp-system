@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <div class="sidebar">
+
+            <h2>Student Panel</h2>
+
+            <a href="/student_profile">
+
+                <button>My Profile</button>
+
+            </a>
+
+            <a href="/student_attendance">
+
+                <button>My Attendance</button>
+
+            </a>
+
+            <a href="/student_marks">
+
+                <button>My Marks</button>
+
+            </a>
+
+            <a href="/student_fees">
+
+                <button>Fee Status</button>
+
+            </a>
+
+            <a href="/student_timetable">
+
+               <button>Timetable</button>
+
+            </a>
+
+            <a href="/view_notifications">
+
+             <button>Notifications</button>
+
+             </a>
+
+            <a href="/logout">
+
+                <button>Logout</button>
+
+            </a>
+
+        </div>
+
+        <div class="content">
+
+            <h1>Welcome Student 😎</h1>
+
+            <p>
+
+                Student Dashboard
+
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

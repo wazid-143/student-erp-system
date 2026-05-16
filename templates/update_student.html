@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Update Student</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Update Student</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <input type="text"
+                   name="name"
+                   value="{{ student[1] }}">
+
+            <input type="text"
+                   name="roll"
+                   value="{{ student[2] }}">
+
+            <input type="text"
+                   name="course"
+                   value="{{ student[3] }}">
+                   <input type="file" name="photo">
+
+            <button type="submit">Update Student</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

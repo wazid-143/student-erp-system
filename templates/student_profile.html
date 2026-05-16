@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Profile</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>My Profile</h1>
+
+        <br>
+
+        <img src="{{ url_for('static', filename='uploads/' + student[5]) }}"
+             width="120"
+             height="120"
+             style="border-radius:50%; object-fit:cover;">
+
+        <br><br>
+
+        <h2>{{ student[1] }}</h2>
+
+        <p><b>Roll:</b> {{ student[2] }}</p>
+
+        <p><b>Course:</b> {{ student[3] }}</p>
+
+        <br>
+
+        <a href="/student_dashboard">
+
+            <button>Back</button>
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

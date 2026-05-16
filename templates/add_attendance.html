@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Add Attendance</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Add Attendance</h1>
+
+        <form method="POST">
+
+            <input type="text"
+                   name="student_name"
+                   placeholder="Student Name">
+
+            <input type="text"
+                   name="status"
+                   placeholder="Present / Absent">
+
+            <input type="date"
+                   name="date">
+
+            <button type="submit">
+
+                Save Attendance
+
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

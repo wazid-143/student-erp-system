@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <div class="sidebar">
+
+            <h2>Admin Panel</h2>
+
+            <a href="/add_student">
+                <button>Add Student</button>
+            </a>
+
+            <a href="/view_students">
+                <button>View Students</button>
+            </a>
+
+            <a href="/search_student">
+                <button>Search Student</button>
+            </a>
+
+            <a href="/add_timetable">
+                <button>Add Timetable</button>
+            </a>
+
+            <a href="/add_fees">
+                <button>Add Fees</button>
+            </a>
+
+            <a href="/view_fees">
+                <button>View Fees</button>
+            </a>
+
+            <a href="/create_user">
+                <button>Create User</button>
+            </a>
+
+            <a href="/add_notification">
+                <button>Add Notification</button>
+            </a>
+
+            <a href="/logout">
+                <button>Logout</button>
+            </a>
+
+        </div>
+
+        <div class="content">
+
+            <h1>Welcome Admin 😎</h1>
+
+            <!-- CARDS -->
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h2>Total Students</h2>
+
+                    <h1>{{ total_students }}</h1>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>Attendance Records</h2>
+
+                    <h1>{{ total_attendance }}</h1>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>Marks Records</h2>
+
+                    <h1>{{ total_marks }}</h1>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>Fees Records</h2>
+
+                    <h1>{{ total_fees }}</h1>
+
+                </div>
+
+            </div>
+
+            <!-- CHARTS -->
+
+            <div class="charts">
+
+                <div class="chart-box">
+
+                    <canvas id="studentsChart"></canvas>
+
+                </div>
+
+                <div class="chart-box">
+
+                    <canvas id="attendanceChart"></canvas>
+
+                </div>
+
+                <div class="chart-box">
+
+                    <canvas id="feesChart"></canvas>
+
+                </div>
+
+                <div class="chart-box">
+
+                    <canvas id="marksChart"></canvas>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CHART JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+
+        // STUDENTS CHART
+
+        const studentsChart =
+            document.getElementById('studentsChart');
+
+        new Chart(studentsChart, {
+
+            type: 'bar',
+
+            data: {
+
+                labels: ['Students'],
+
+                datasets: [{
+
+                    label: 'Total Students',
+
+                    data: ["{{ total_students }}"],
+
+                    borderWidth: 1
+
+                }]
+
+            }
+
+        });
+
+
+
+        // ATTENDANCE CHART
+
+        const attendanceChart =
+            document.getElementById('attendanceChart');
+
+        new Chart(attendanceChart, {
+
+            type: 'line',
+
+            data: {
+
+                labels: ['Attendance'],
+
+                datasets: [{
+
+                    label: 'Attendance Records',
+
+                    data: ["{{ total_attendance }}"],
+
+                    borderWidth: 1
+
+                }]
+
+            }
+
+        });
+
+
+
+        // FEES CHART
+
+        const feesChart =
+            document.getElementById('feesChart');
+
+        new Chart(feesChart, {
+
+            type: 'pie',
+
+            data: {
+
+                labels: ['Fees'],
+
+                datasets: [{
+
+                    data: ["{{ total_fees }}"]
+
+                }]
+
+            }
+
+        });
+
+
+
+        // MARKS CHART
+
+        const marksChart =
+            document.getElementById('marksChart');
+
+        new Chart(marksChart, {
+
+            type: 'doughnut',
+
+            data: {
+
+                labels: ['Marks'],
+
+                datasets: [{
+
+                    data: ["{{ total_marks }}"]
+
+                }]
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

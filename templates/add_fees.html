@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Add Fees</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Add Fees</h1>
+
+        <form method="POST">
+
+            <input type="text"
+                   name="student_name"
+                   placeholder="Student Name">
+
+            <input type="text"
+                   name="amount"
+                   placeholder="Amount">
+
+            <input type="text"
+                   name="status"
+                   placeholder="Paid / Unpaid">
+
+            <button type="submit">
+
+                Save Fees
+
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
