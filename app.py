@@ -13,4 +13,5 @@ app.secret_key = "wazid"
 register_auth_routes(app)
 register_student_routes(app)
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
